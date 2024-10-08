@@ -110,7 +110,7 @@
     </div>
   </section>
 
-  <section style="margin-top: 200px;"> 
+  <section style="margin-top: 200px;">
     <div class="modal modal-sheet position-static d-block" tabindex="-1" role="dialog" id="modalSignin">
       <div class="modal-dialog" role="document">
         <div class="modal-content rounded-4 shadow">
@@ -120,18 +120,37 @@
           </div>
           <div class="modal-body p-5 pt-0">
             <form class="form-container">
+              <!-- Full Name Field -->
               <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <input type="text" class="form-control" id="floatingFullName" placeholder="Full Name">
+                <label for="floatingFullName">Full Name</label>
+              </div>
+              <!-- Email Field -->
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Email address</label>
               </div>
+              <!-- Password Field -->
               <div class="form-floating mb-3">
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
                 <label for="floatingPassword">Password</label>
               </div>
-              <button class="w-100 mb-2 btn btn-lg rounded-3 btn-signup" type="submit">Sign up</button> <!-- Updated button class -->
+              <!-- Confirm Password Field -->
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingConfirmPassword" placeholder="Confirm Password">
+                <label for="floatingConfirmPassword">Confirm Password</label>
+              </div>
+              <!-- Terms and Conditions Checkbox -->
+              <div class="checkbox mb-3">
+                <label>
+                  <input type="checkbox" value="agree-to-terms"> <a href="#" style="color: black; text-decoration: underline;">I agree to the terms and conditions</a>
+                </label>
+              </div>
+              <!-- Sign Up Button -->
+              <button class="w-100 mb-2 btn btn-lg rounded-3 btn-signup" style="background-color: black; color: white; type="submit">Sign up</button>
               <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
               <hr class="my-4">
-              <h2 class="fs-5 fw-bold mb-3" style="color: black;">Or use a third-party</h2> <!-- Updated header text color -->
+              <h2 class="fs-5 fw-bold mb-3" style="color: black;">Or use a third-party</h2>
               <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
                 <svg class="bi me-1" width="16" height="16"><use xlink:href="#twitter"></use></svg>
                 Sign up with Twitter
@@ -147,33 +166,5 @@
     </div>
   </section>
 
-  <section class="gallery py-5">
-    <div class="container">
-      <h2 class="text-center mb-4" style="color: white;">Gallery.</h2>
-      <div class="row">
-        <div class="col-md-6 mb-4">
-          <img src="images/image1.jpg" class="img-fluid rounded" alt="Gallery Image 1">
-        </div>
-        <div class="col-md-6 mb-4">
-          <img src="images/image2.jpg" class="img-fluid rounded" alt="Gallery Image 2">
-        </div>
-        <div class="col-md-6 mb-4">
-          <img src="images/image3.jpg" class="img-fluid rounded" alt="Gallery Image 3">
-        </div>
-        <div class="col-md-6 mb-4">
-          <img src="images/image4.jpg" class="img-fluid rounded" alt="Gallery Image 4">
-        </div>
-        <div class="col-md-6 mb-4">
-          <img src="images/image5.jpg" class="img-fluid rounded" alt="Gallery Image 5">
-        </div>
-        <div class="col-md-6 mb-4">
-          <img src="images/image6.jpg" class="img-fluid rounded" alt="Gallery Image 6">
-        </div>
-      </div>
-      <div class="text-center">
-        <a href="#" class="btn btn-light">See More</a>
-      </div>
-    </div>
-  </section>
 </body>
 </html>
