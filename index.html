@@ -6,29 +6,38 @@
   <title>Porsche 911 GT3 RS | High-Performance Redefined</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
+  <link rel="icon" href=
+  "./images/porschebadge.png" type="image/x-icon" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header class="d-flex flex-wrap justify-content-center align-items-center py-10 mb-4 border-bottom fixed-top" style="background-color: white;">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-      <svg class="bi me-2" width="40" height="40"><use xlink:href="#bootstrap"></use></svg>
-      <span class="fs-4">
-        <img src="./images/porschelogo.png" alt="porsche" style="width: 200px">
-      </span>
-    </a>
-    <ul class="nav nav-pills">
-      <li class="nav-item">
-        <a href="#home" class="nav-link" style="background-color: white; color: black; border-radius: 5px; margin-right: 10px;">Home</a>
-      </li>
-      <li class="nav-item">
-        <a href="#gallery" class="nav-link" style="background-color: white; color: black; border-radius: 5px; margin-right: 10px;">Gallery</a>
-      </li>
-      <li class="nav-item">
-        <a href="#about" class="nav-link" style="background-color: white; color: black; border-radius: 5px; margin-right: 10px;">About the car</a>
-      </li>
-    </ul>
-  </header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="./images/porschelogo.png" alt="porsche" style="width: 200px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto"> 
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About the car</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  
+  
 
   <section id="home" style="padding-top: 200px;">
     <div class="container col-xl-10 col-xxl-8 px-4 py-5">
@@ -50,11 +59,11 @@
             <div class="checkbox mb-3">
               <label><input type="checkbox" value="remember-me"> Remember me</label>
             </div>
-            <!-- Added Forgot Password link -->
+            
             <div class="mb-3">
               <a href="#" style="color: black; text-decoration: underline;">Forgot Password?</a>
             </div>
-            <button class="w-100 btn btn-lg" type="submit" style="background-color: black; color: white;">Sign in</button>
+            <button type="button" class="w-100 btn btn-lg" style="background-color: black; color: white;" onclick="event.preventDefault();">Sign in</button>
             <hr class="my-4">
             <div class="text-center">
               <p class="mb-0">Don't have an account? 
@@ -66,6 +75,7 @@
       </div>
     </div>
   </section>
+  
 
   <!-- Sign Up Modal -->
   <section style="margin-top: 200px;">
@@ -100,11 +110,13 @@
               </div>
               <!-- Terms and Conditions Checkbox -->
               <div class='checkbox mb-3'>
-                <label><input type='checkbox' value='agree-to-terms'> 
-                  <a href='#' style='color:black;text-decoration:underline;'>I agree to the terms and conditions</a></label>
+                <label>
+                  <input type='checkbox' value='agree-to-terms'> 
+                  <a href='#' style='color:black;text-decoration:underline;'>I agree to the terms and conditions</a>
+                </label>
               </div>
               <!-- Sign Up Button -->
-              <button class='w-100 mb-2 btn btn-lg rounded-3 btn-signup' style='background-color:black;color:white;' type='submit'>Sign up</button>
+              <button class='w-100 mb-2 btn btn-lg rounded-3 btn-signup' style='background-color:black;color:white;' type='button' onclick="event.preventDefault();">Sign up</button>
               <small class='text-body-secondary'>By clicking Sign up, you agree to the terms of use.</small>
               <hr class='my-4'>
             </form>
@@ -113,6 +125,7 @@
       </div>
     </div> 
   </section>
+  
 
   <section id="gallery">
     <h1 class='fw-bold mb-0 fs-2 text-center' style='color:black;'>Gallery</h1>
@@ -179,65 +192,63 @@
 </section>
 
   
-    <section class="section about-section gray-bg" id="about">
-      <div class="container">
-          <div class="row align-items-center flex-row-reverse">
-              <div class="col-lg-6">
-                  <div class="about-text go-to">
-                      <h3 class="dark-color">About The Car</h3>
-                      <h6 class="theme-color lead">Porsche 911 GT3 RS</h6>
-                      <p>A high-performance sports car designed for enthusiasts, combining exceptional power with cutting-edge technology. This car exemplifies Porsche's dedication to motorsport and engineering excellence.</p>
-                      <div class="row about-list">
-                          <div class="col-md-6">
-                              <div class="media">
-                                <label class="bold-label">Top Speed</label>
-                                  <p>318 km/h (197 mph)</p>
-                              </div>
-                              <div class="media">
-                                <label class="bold-label">Horsepower</label>
-                                  <p>518 hp (385 kW)</p>
-                              </div>
-                              <div class="media">
-                                <label class="bold-label">Engine</label>
-                                  <p>4.0L flat-six</p>
-                              </div>
-                              <div class="media">
-                                <label class="bold-label">0-100 km/h (0-62 mph)</label>
-                                  <p>3.2 seconds</p>
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="media">
-                                <label class="bold-label">Weight</label>
-                                  <p>1,450 kg (3,197 lbs)</p>
-                              </div>
-                              <div class="media">
-                                <label class="bold-label">Transmission</label>
-                                  <p>7-speed PDK dual-clutch automatic</p>
-                              </div>
-                              <div class="media">
-                                <label class="bold-label">Drivetype</label>
-                                  <p>Rear-wheel drive</p>
-                              </div>
-                              <div class="media">
-                                  <label class="bold-label">Brakes system</label>
-                                  <p>Ceramic composite brakes</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+<section class="section about-section gray-bg" id="about">
+  <div class="container">
+    <div class="row align-items-center flex-column flex-lg-row">
+      <div class="col-lg-6">
+        <div class="about-text go-to">
+          <h3 class="dark-color">About The Car</h3>
+          <h6 class="theme-color lead">Porsche 911 GT3 RS</h6>
+          <p>A high-performance sports car designed for enthusiasts, combining exceptional power with cutting-edge technology. This car exemplifies Porsche's dedication to motorsport and engineering excellence.</p>
+          <div class="row about-list">
+            <div class="col-md-6">
+              <div class="media mb-3">
+                <label class="bold-label">Top Speed</label>
+                <p>318 km/h (197 mph)</p>
               </div>
-              <div class="col-lg-6">
-                  <div class="about-avatar">
-                      <img src="./images/aboutthecar.avif" title="" alt="" style="max-width: 650px;">
-                  </div>
+              <div class="media mb-3">
+                <label class="bold-label">Horsepower</label>
+                <p>518 hp (385 kW)</p>
               </div>
+              <div class="media mb-3">
+                <label class="bold-label">Engine</label>
+                <p>4.0L flat-six</p>
+              </div>
+              <div class="media mb-3">
+                <label class="bold-label">0-100 km/h (0-62 mph)</label>
+                <p>3.2 seconds</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="media mb-3">
+                <label class="bold-label">Weight</label>
+                <p>1,450 kg (3,197 lbs)</p>
+              </div>
+              <div class="media mb-3">
+                <label class="bold-label">Transmission</label>
+                <p>7-speed PDK dual-clutch automatic</p>
+              </div>
+              <div class="media mb-3">
+                <label class="bold-label">Drivetype</label>
+                <p>Rear-wheel drive</p>
+              </div>
+              <div class="media mb-3">
+                <label class="bold-label">Brakes system</label>
+                <p>Ceramic composite brakes</p>
+              </div>
+            </div>
           </div>
-                  </div>
-              </div>
-          </div>
+        </div>
       </div>
-  </section>
+      <div class="col-lg-6 d-flex justify-content-center">
+        <div class="about-avatar">
+          <img src="./images/aboutthecar.avif" title="Porsche 911 GT3 RS" alt="Porsche 911 GT3 RS" class="img-fluid" style="max-width: 100%; height: auto;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
   <section>
     <footer class="bg-light text-dark py-4">
         <div class="container">
