@@ -1,3 +1,38 @@
+    body {
+      padding-top: 56px; /* Adjust based on your navbar height */
+    }
+
+    /* Navbar hover effect */
+    .navbar-nav .nav-link {
+      transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+    }
+
+    .navbar-nav .nav-link {
+      position: relative; /* Required for the pseudo-element */
+      transition: color 0.3s, font-weight 0.3s; /* Smooth transition for text color */
+      text-decoration: none; /* Remove default underline */
+    }
+
+    .navbar-nav .nav-link:hover::after {
+      width: 100%; /* Full width on hover */
+    }
+
+    .navbar-nav .nav-link:hover {
+      font-weight: 500;
+      color: black; /* Change text color on hover */
+    }
+    .navbar-nav .nav-link::after {
+      content: ''; /* Create a pseudo-element */
+      display: block; /* Make it block to take full width */
+      height: 2px; /* Height of the underline */
+      width: 0; /* Initially set to 0 width */
+      background-color: black; /* Underline color */
+      transition: width 0.3s; /* Smooth transition for width */
+      position: absolute; /* Positioning for animation */
+      left: 0; /* Align to the left */
+      bottom: -5px; /* Position under the text */
+    }
+
 body {
     background-image: url('images/porschegt3rs.png');
     background-size: cover;
