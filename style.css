@@ -108,3 +108,27 @@ img {
 .bold-label {
   font-weight: bold;
 }
+
+/* Target buttons only within forms */
+form .btn-lg {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  height: 50px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+/* Prevent expansion on active state */
+form .btn-lg:active {
+  transform: none;
+  padding: 12px;
+  height: 50px;
+  box-shadow: none;
+}
+
+/* Optional hover effect for buttons */
+form .btn-lg:hover {
+  background-color: #333;
+}
