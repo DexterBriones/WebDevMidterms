@@ -69,7 +69,7 @@
             <hr class="my-4">
             <div class="text-center">
               <p class="mb-0">Don't have an account? 
-                <a href="#" data-bs-toggle="modal" style="color: black; text-decoration: underline;">Sign up</a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalSignup" style="color: black; text-decoration: underline;">Sign up</a>
               </p>
             </div>
           </form>
@@ -79,54 +79,53 @@
   </section>
   
 
-  <!-- Sign Up Modal -->
-  <section style="margin-top: 200px;">
-    <div class="modal modal-sheet position-static d-block" tabindex="-1" role="dialog" id="modalSignin">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content rounded-4 shadow">
-          <div class="modal-header p-5 pb-4 border-bottom-0">
-            <h1 id='modalTitle' aria-labelledby='modalTitle' class='fw-bold mb-0 fs-2' style='color:black;'>Sign up for free</h1>
-            <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
-          </div>
-          <div class='modal-body p-5 pt-0'>
-            <form class='form-container'>
-              <!-- Full Name Field -->
-              <div class='form-floating mb-3'>
-                <input type='text' class='form-control' id='floatingFullName' placeholder='Full Name'>
-                <label for='floatingFullName'>Full Name</label>
-              </div>
-              <!-- Email Field -->
-              <div class='form-floating mb-3'>
-                <input type='email' class='form-control rounded-3' id='floatingSignUpEmail' placeholder='name@example.com'>
-                <label for='floatingSignUpEmail'>Email address</label>
-              </div>
-              <!-- Password Field -->
-              <div class='form-floating mb-3'>
-                <input type='password' class='form-control' id='floatingSignUpPassword' placeholder='Password'>
-                <label for='floatingSignUpPassword'>Password</label>
-              </div>
-              <!-- Confirm Password Field -->
-              <div class='form-floating mb-3'>
-                <input type='password' class='form-control' id='floatingConfirmPassword' placeholder='Confirm Password'>
-                <label for='floatingConfirmPassword'>Confirm Password</label>
-              </div>
-              <!-- Terms and Conditions Checkbox -->
-              <div class='checkbox mb-3'>
-                <label>
-                  <input type='checkbox' value='agree-to-terms'> 
-                  <a href='#' style='color:black;text-decoration:underline;'>I agree to the terms and conditions</a>
-                </label>
-              </div>
-              <!-- Sign Up Button -->
-              <button class='w-100 mb-2 btn btn-lg rounded-3 btn-signup' style='background-color:black;color:white;' type='button' onclick="event.preventDefault();">Sign up</button>
-              <small class='text-body-secondary'>By clicking Sign up, you agree to the terms of use.</small>
-              <hr class='my-4'>
-            </form>
-          </div>
-        </div>
+<!-- Sign Up Modal -->
+<div class="modal fade" id="modalSignup" tabindex="-1" aria-labelledby="modalSignupLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header p-5 pb-4 border-bottom-0">
+        <h1 id="modalSignupLabel" class="fw-bold mb-0 fs-2" style="color:black;">Sign up for free</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-    </div> 
-  </section>
+      <div class="modal-body p-5 pt-0">
+        <form class="form-container">
+          <!-- Full Name Field -->
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingFullName" placeholder="Full Name">
+            <label for="floatingFullName">Full Name</label>
+          </div>
+          <!-- Email Field -->
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control rounded-3" id="floatingSignUpEmail" placeholder="name@example.com">
+            <label for="floatingSignUpEmail">Email address</label>
+          </div>
+          <!-- Password Field -->
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingSignUpPassword" placeholder="Password">
+            <label for="floatingSignUpPassword">Password</label>
+          </div>
+          <!-- Confirm Password Field -->
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingConfirmPassword" placeholder="Confirm Password">
+            <label for="floatingConfirmPassword">Confirm Password</label>
+          </div>
+          <!-- Terms and Conditions Checkbox -->
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="agree-to-terms">
+              <a href="#" style="color:black;text-decoration:underline;">I agree to the terms and conditions</a>
+            </label>
+          </div>
+          <!-- Sign Up Button -->
+          <button class="w-100 mb-2 btn btn-lg rounded-3 btn-signup" style="background-color:black;color:white;" type="submit">Sign up</button>
+          <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
+          <hr class="my-4">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
   
 
   <section id="gallery" class="pt-4"> <!-- Added padding-top for extra spacing -->
